@@ -119,9 +119,16 @@
   *flask_cors*允许前端的请求跨域访问后端接口，跨域指的是当前所在页面的网页请求了另一个不同源的地址，网址的源由三部分组成：协议、域名\IP、端口号，只要有一个不一样，都算是跨域
 * localhost是一个什么地址：  
   默认是一个回环地址，为127.0.0.1，这个地址表示服务永远发生在本地，跟互联网没关系，例如React调用的端口号是5173，Flask调用的端口号是5000
+* 更高级的全栈开发跟这里最简单的一个示例之间的差距和联系在哪里：  
+  这里可以分成四个方面来阐述：  
+      * 首先是前端，页面中的功能可以分为组件进行开发；可以使用Context API管理全局数据；使用react-router-dom实现路由管理；使用Tailwind CSS提高开发效率  
+      * 后端：使用蓝图Blueprint进行模块划分；支持数据库；加入用户认证；请求校验；增加错误处理机制  
+      * 前后端通信：使用统一的API封装；定义响应规范等等  
+      * 其他：使用Nginx部署静态前端；使用日志记录等等  
 * 还有一些常见的问题(这里的问题合集会持续更新)：   
   * 基于react和vue开发的前端还会有类似之前H5+CSS出现的html文件吗？
   ![问题1](https://github.com/wanna-bornb-disciplinant/lab_page/blob/main/images/1.png?raw=true)
   * 经常听到Java下的SSM是后端开发的经典框架，和这里要学习的Flask和Node.js有什么关系？
+  ![问题2](https://github.com/wanna-bornb-disciplinant/lab_page/blob/main/images/2.png?raw=true)
   
   
