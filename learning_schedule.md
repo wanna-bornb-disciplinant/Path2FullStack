@@ -130,5 +130,38 @@
   ![问题1](https://github.com/wanna-bornb-disciplinant/lab_page/blob/main/images/1.png?raw=true)
   * 经常听到Java下的SSM是后端开发的经典框架，和这里要学习的Flask和Node.js有什么关系？
   ![问题2](https://github.com/wanna-bornb-disciplinant/lab_page/blob/main/images/2.png?raw=true)
+
+### 后续学习计划和路线：
+* 在GPT给出的项目示例和课程中，暂定了编写了一个在线图像标注工具，在这个图像标注工具中，需要完成的目标是前端支持用户上传图片、显示图片和框选区域、可视化标注框、导出为JSON；后端实现接收图片并保存、存储标注数据、提供查询接口、可打包下载
+
+* 项目结构示意图为：
+  ```bash
+    image-annotator/
+    ├── backend/
+    │   ├── app.py
+    │   ├── routes/
+    │   │   ├── upload.py       # 图片上传接口
+    │   │   ├── annotations.py  # 标注数据保存/获取接口
+    │   ├── static/uploads/     # 存储上传图片
+    │   ├── models.py
+    │   ├── config.py
+    │   └── requirements.txt
+    ├── frontend/
+    │   ├── src/
+    │   │   ├── components/
+    │   │   │   └── AnnotatorCanvas.tsx
+    │   │   ├── pages/
+    │   │   │   └── UploadPage.tsx
+    │   │   ├── services/       # API 请求函数
+    │   │   └── App.tsx
+    │   └── package.json
+  ```
+
+* 实现步骤大致为：
+  * 后端图片上传接口：支持保存上传的图片并返回访问路径
+  * 前端上传页面：实现图片上传 + 展示
+  * 前端标注组件：允许用户在图片上画框
+  * 保存标注数据接口：发送坐标数据到 Flask
+  * 展示/编辑已有标注：加载 JSON 数据渲染框
   
   
